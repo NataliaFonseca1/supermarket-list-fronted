@@ -1,0 +1,10 @@
+.list-render-container{
+  width: 60vw;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

@@ -1,10 +1,10 @@
 @font-face{
   font-family: 'Avenir Next';
-  src: url('/public/Fonts/AvenirNext-Regular.otf')
+  src: url('/public/Fonts/AvenirNext-Regular.otf');
 }
 @font-face{
   font-family: 'Avenir Next';
-  src: url('/public/Fonts/AvenirNext-Regular.otf');
+  src: url('/public/Fonts/AvenirNext-Bold.otf');
   font-weight:bold;
 }
 @font-face{
@@ -12,7 +12,11 @@
   src: url('/public/Fonts/AvenirNext-Regular.otf');
   font-size: italic;
 }
-
+@font-face{
+  font-family: 'Avenir Next';
+  src: url('/public/Fonts/AvenirNext-Medium.ttf');
+  font-weight: 500;
+}
 
 
 body {
@@ -38,4 +42,8 @@ h3{
   font-weight:500px;
   margin: 0;
   padding: 0;
+}
+::-webkit-scrollbar {
+  visibility: hidden;
+  width: 0px;
 }

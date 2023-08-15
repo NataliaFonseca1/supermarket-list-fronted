@@ -12,16 +12,32 @@
   flex-direction:column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 1128px;
-  height: 824px;
+  width: 60vw;
+  height: 84vh;
   background-color: white;
   border-radius: 24px;
-  padding: 35px;
+  padding: 24px;
+  overflow: hidden;
 }
 .list-screen-header{
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+.list-screen-title-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list-screen-header-title{
+  font-size: 32px;
+  font-weight:bolder;
+  margin-left: 12px;
+}
+.list-screen-header-button-container{
+  width: 160px;
 }
 .logo-image{
   width: 72px;
