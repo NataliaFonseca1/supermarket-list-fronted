@@ -1,6 +1,6 @@
 import {ListCard } from '../ListCard'
 import "./index.css"
-export const ListRender = ({list}) =>{
+export const ListRender = ({list, onEdit}) =>{
   if(list?.length === 0){
     return (
       <h3>Sua lista está vazia, clique no botão adicionar para incluir novos itens.</h3>
@@ -14,7 +14,7 @@ export const ListRender = ({list}) =>{
       {
         list.map( 
           (item)=> (
-          <ListCard key={item?._id} item={item}/>
+          <ListCard onClick={onEdit} key={item?._id} item={item}/>
           ))
       }
 
