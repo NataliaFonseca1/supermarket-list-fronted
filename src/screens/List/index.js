@@ -1,7 +1,7 @@
 
 import './index.css';
 import { useState, useEffect } from 'react';
-import { getList } from './../../services/api/request';
+import { getList, updateItem } from './../../services/api/request';
 
 import { Button, ListRender, Loader, Modal } from '../../components';
 
@@ -12,6 +12,7 @@ export const ListScreen = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const loadListItems = async () => {
+    setLoading(true)
     const result = await getList();
    
     setListData(result);
@@ -34,7 +35,16 @@ const onEditItem = (item) =>{
 setSelectedItem(item);
 setModalVisible(true);
 }
-
+const onCheckItem = async (item) =>{
+  const result = await updateItem(item?._id,{
+  name:item.name,
+  quantity: Number(item.quantity), 
+    checked:!item.checked
+  })
+  if(!result.error){
+   await loadListItems();
+  }
+}
 
   return (
     <div className='list-screen-container'>
@@ -44,17 +54,27 @@ setModalVisible(true);
          <img className="logo-image " src="Imagens/logo.png" alt="supermarket-list-logo" />
           <h1 className='list-screen-header-title'>Lista Supermercado</h1>
          </div>
-         <div>
-          <Button onClick={onClickAddButton}className="list-screen-header-button-container">Adicionar</Button>
+         <div className="list-screen-header-button-container">
+          <Button onClick={onClickAddButton}>
+           {
+            window.innerWidth <= 420 ? '+' : 'Adicionar'
+           }
+            </Button>
           </div>
         </div>
         <div className='list-screen-list-container'>
-          {
-            loading ? <Loader/> : <ListRender onEdit={onEditItem} list={listData}/>
-          }
+        {loading ? (
+            <Loader />
+          ) : (
+            <ListRender
+              onCheckItem={onCheckItem}
+              onEdit={onEditItem}
+              list={listData}
+            />
+          )}
         </div>
       </div>
-      {modalVisible && <Modal item={selectedItem} onClose={onCloseModal}/>}
+      {modalVisible && <Modal item={selectedItem} onClose={onCloseModal} />}
     </div>
-  );
-};
+  )
+}

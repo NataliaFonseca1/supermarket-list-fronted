@@ -50,3 +50,27 @@
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 830px){
+  .list-screen-header-title{
+    font-size: 24px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (max-width:420px ){
+  .list-screen-header-title{
+    font-size: 20px;
+    line-height: 18px;
+    margin: 8px;
+  }
+  .list-screen-header{
+    max-width: 100%;
+  }
+
+  .logo-image{
+    width: 34px;
+    height: auto;
+  }
+
+
+}

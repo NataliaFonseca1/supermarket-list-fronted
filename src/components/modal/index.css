@@ -26,7 +26,7 @@
 .modal-header{
   display: flex;
   flex-direction: row;
-  
+  margin-top: 25px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -66,4 +66,58 @@ color: #7796db;
   width:24px;
   object-fit: contain;
   margin-right: 6px;
+}
+@media screen and (max-width:830px ){
+  .modal-content{
+    width:60vw;
+  }
+  .buttons-container{
+    height: 20vh;
+    width: 100%;
+    margin-top: 40vh;
+    display: inline;
+    
+  }
+  .main{
+    height: 5vh;
+    padding: 10;
+    width: 100%;
+    margin-top: 5vh;
+
+    }
+    .outline{
+      height: 5vh;
+      padding: 10;
+      width: 100%;
+    }
+   
+
+}
+
+@media screen and (max-width:420px ){
+  .modal-content{
+    width:100vw;
+   
+  }
+  .buttons-container{
+    height: 20vh;
+    width: 100%;
+    margin-top: 42vh;
+    display: inline;
+    
+  }
+  .main{
+    height: 5vh;
+    padding: 10;
+    width: 100%;
+    margin-top: 5vh;
+
+    }
+    .outline{
+      height: 5vh;
+      padding: 10;
+      width: 100%;
+    }
+   
+
 }

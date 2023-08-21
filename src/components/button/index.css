@@ -10,7 +10,22 @@ color: white;
   border: 0;
   cursor: pointer;
 }
+@media screen and (max-width:420px){
+  .button-container{
+    width:45px ;
+  }
+
+
+}
 .home-screen-form-container{
   width: 452px;
 
+}
+.main{
+  background-color: #7785db;
+  color:white;
+}
+.outline{
+  background-color: #f2f4ff;
+  color: #7785db;
 }
