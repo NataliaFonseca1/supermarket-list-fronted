@@ -34,13 +34,14 @@ code {
 h1{
   font-weight:bolder;
   font-size:24px;
-  line-height: 20px;
+  line-height: 21px;
   color: black;
 }
 h3{
   font-size:16px;
   font-weight:500px;
-  margin: 0;
+  margin-right: 50px;
+  margin-left: 50px;
   padding: 0;
 }
 @media screen and (max-width:420px){
